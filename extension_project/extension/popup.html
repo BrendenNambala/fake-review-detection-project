@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 340px; font-family: "Segoe UI", system-ui, sans-serif; margin: 0; background: #f1f5f9; color: #0f172a; }
+    header { background: #0f172a; color: #fff; padding: 12px 14px; }
+    header h1 { font-size: 14px; margin: 0; }
+    header p { font-size: 11px; margin: 2px 0 0; color: #94a3b8; }
+    .body { padding: 14px; }
+    textarea { width: 100%; box-sizing: border-box; height: 84px; border: 1px solid #cbd5e1; border-radius: 6px;
+               padding: 8px; font-family: inherit; font-size: 13px; resize: vertical; }
+    button { margin-top: 8px; width: 100%; background: #2563eb; color: #fff; border: 0; border-radius: 6px;
+             padding: 9px; font-size: 13px; font-weight: 600; cursor: pointer; }
+    button.secondary { background: #e2e8f0; color: #0f172a; font-weight: 500; }
+    #verdict { margin-top: 12px; padding: 10px; border-radius: 6px; font-weight: 700; font-size: 13px; display: none; }
+    .fake { background: #fee2e2; color: #b91c1c; }
+    .genuine { background: #dcfce7; color: #15803d; }
+    #evidence { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px; }
+    .chip { font-size: 11px; padding: 2px 6px; border-radius: 4px; }
+    .chip.f { background: #fee2e2; color: #b91c1c; }
+    .chip.g { background: #dcfce7; color: #15803d; }
+    .note { font-size: 11px; color: #64748b; margin-top: 10px; }
+    #settings { font-size: 11px; color: #64748b; margin-top: 10px; }
+    #apiUrl { width: 100%; box-sizing: border-box; font-size: 11px; padding: 4px; border: 1px solid #cbd5e1; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🔍 Fake Review Detector</h1>
+    <p>Namibian consumer reviews</p>
+  </header>
+  <div class="body">
+    <textarea id="review" placeholder="Paste a review here, or select text on the page and click 'Use selected text'."></textarea>
+    <button id="useSelection" class="secondary">Use selected text from page</button>
+    <button id="analyse">Analyse review</button>
+    <div id="verdict"></div>
+    <div id="evidence"></div>
+    <div class="note" id="status"></div>
+    <details id="settings">
+      <summary>API settings</summary>
+      <p>Prediction API URL:</p>
+      <input id="apiUrl" placeholder="https://your-api-url/predict" />
+      <button id="saveUrl" class="secondary" style="margin-top:6px;">Save</button>
+    </details>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

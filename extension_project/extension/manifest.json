@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Fake Review Detector (Namibia)",
+  "version": "1.0",
+  "description": "Checks whether a consumer review is likely genuine or fake, using a machine learning model trained on Namibian reviews.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Fake Review Detector"
+  },
+  "permissions": ["activeTab", "scripting", "contextMenus", "storage", "notifications"],
+  "host_permissions": ["https://www.google.com/*", "https://www.google.com.na/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/maps/*", "https://www.google.com.na/maps/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": { "128": "icon128.png" }
+}

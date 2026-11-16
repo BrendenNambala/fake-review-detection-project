@@ -1,0 +1,15 @@
+.frd-badge {
+  display: inline-block;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+  margin: 4px 6px 4px 0;
+  line-height: 1.6;
+  vertical-align: middle;
+}
+.frd-fake    { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+.frd-genuine { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+.frd-loading { background: #e2e8f0; color: #475569; }
+.frd-unknown { background: #f1f5f9; color: #94a3b8; }
